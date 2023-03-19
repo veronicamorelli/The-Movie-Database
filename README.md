@@ -21,7 +21,7 @@ The project is developed in the following steps:
 ### 1.1 API (Application Programming Interface)
 
 The data acquisition phase is performed in two different stages, one consequential to the other. Documentation can be found at the following link: https://imdb-api.com/api. First step is to use functionality of the Advanced Search API found at: https://imdbapi.com/api#AdvancedSearch-header. Second step is to use the functionality of the Title API found at: https://imdbapi.com/api#Title-header. To use the API, one had to create an IMDB account from which one one obtained a key, called the API Key. It is specified that for each key you can make only 100 requests per day, consequently, in the second step one had to create several accounts, then several API Keys to be able to download all the data in a reasonable time. At the end of this first phase of downloading data, a documentary database containing 14365 documents is obtained, each of them related to a film.
-The attributes for each movie can be found in "Appendix A - IMDB Movie Attribute Descriptions before the Data Cleaning step".
+The attributes for each movie can be found in "Dataset Description.txt".
 
 **Data Storage**
 
