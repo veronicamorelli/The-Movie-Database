@@ -20,12 +20,22 @@ The project is developed in the following steps:
 
 ### 1.1 API (Application Programming Interface)
 
-The data acquisition phase is performed in two different stages, one consequential to the other. Documentation can be found at the following link: https://imdb-api.com/api. First step is to use functionality of the Advanced Search API found at: https://imdbapi.com/api#AdvancedSearch-header. Second step is to use the functionality of the Title API found at: https://imdbapi.com/api#Title-header. To use the API, one had to create an IMDB account from which one 
-one obtained a key, called the API Key. It is specified that for each key you can make 
-only 100 requests per day, consequently, in the second step one had to create several 
-accounts, then several API Keys to be able to download all the data in a reasonable time.
+The data acquisition phase is performed in two different stages, one consequential to the other. Documentation can be found at the following link: https://imdb-api.com/api. First step is to use functionality of the Advanced Search API found at: https://imdbapi.com/api#AdvancedSearch-header. Second step is to use the functionality of the Title API found at: https://imdbapi.com/api#Title-header. To use the API, one had to create an IMDB account from which one one obtained a key, called the API Key. It is specified that for each key you can make only 100 requests per day, consequently, in the second step one had to create several accounts, then several API Keys to be able to download all the data in a reasonable time. At the end of this first phase of downloading data, a documentary database containing 14365 documents is obtained, each of them related to a film.
 
-Translated with www.DeepL.com/Translator (free version)
+**Data Storage**
+
+The output of phase 1 consists of a list of ids, each related to a film. The list is stored locally in a text file (extension .txt). The output of Phase 2 consists of a single document database in json format containing 14365 documents, each related to one film. To obtain this complete dataset we take advantage of the capabilities of the library python `pymongo` as follows. From python we connect to MongoDB by creating a database and 
+a collection in which to store the data. After this, one performs the 
+requests for data with the Title API. Each time a request is executed you store the 
+result on MongoDB using the collect.one() function. This procedure makes it possible to 
+store information in a document database that is continuously 
+updated by new data requested via API. Considering that MongoDB limits the database 
+to a size of 17MB, two different databases are created in which to store data. 
+At the end of the storage phase, a document dataset in json format is obtained. The 
+next steps that follow are Data Cleaning and Data Quality Assessment. Once 
+the dataset is settled it can be used in the Data Integration and Data 
+Exploration.
+
 
 ## 2. Data Cleaning
 
