@@ -1,0 +1,49 @@
+DATASET DESCRIPTION
+
+Description of IMDB Film Attributes before Data Cleaning Phase
+1. ActorList: list of dictionaries, where each dictionary contains two keys, containing 
+information about the name of the actor and the role played. 
+2. Awards: list of strings, containing information regarding the Top Rated 
+Movie", number of Oscars won, awards won and total nominations;
+3. BoxOffice: dictionary with reference to the box office. It contains 4 keys, where 
+budget (which includes all costs related to the development, production and post-production of the film), the Worldwide Cumulative Box Office (the total amount of money 
+paid by people around the world to watch a film), grossUSA (the total amount 
+collected through ticket sales at cinema counters or online during a 
+period of time in the US.), OpeningweUSA (defined as the receipts at the 
+box office from Friday to Sunday in the USA);
+4. Companies: list of film production studios; 
+5. CompanyList
+6. ContentRating: rating certificates given to titles, necessary to admit or exclude 
+younger viewers from viewing;
+7. Countries: list of countries. IMDB defines the country of a title as the place or places where 
+production companies for that title are based, and therefore where the 
+financing originated;
+8. CountryList
+9. Directors: list of directors;
+10. DirectorList
+11. ErrorMessage: this attribute indicates whether there were any 
+problems. The value of the attribute is None if there were no problems;
+12. fullTitle: Full title;
+13. Genres: list of genres to which the film belongs;
+14. GenreList
+15. Id: alphanumeric code that uniquely identifies the film;
+16. imdbRating: average of the ratings given by IMDB users. The rating does not consist 
+not an algebraic average but a weighted average: the rating of the most active users weighs more than that of the most active users. 
+users weighs more than less active users;
+17. imdbRatingVotes: Number of IMDB users who rated the film;
+18. Image: link to the film's cover image on IMDB;
+19. Images
+20. keyWordList: list of keywords, i.e. words attached to a title to describe 
+any notable object, concept, style or action that takes place during a title. The purpose 
+main purpose of keywords is to allow visitors to easily search and discover the 
+titles;
+21. Keywords: string containing all keywords;
+22. Languages: list of languages spoken in the titles in the database;
+23. LanguageList
+24. metacriticRating: score that converts each review from the "Metecritic" website into a 
+percentage;
+25. OriginalTitle: original title;
+26. Plot: short plot description to help inform people of the events that 
+take place in the title;
+27. PlotLocal
+28. PlotLocalIsRTL
